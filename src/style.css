@@ -41,10 +41,6 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
-a.is-active:hover {
-  color: #00acdc;
-}
-
 nav ul li a.is-active {
   color: #00acdc;
 }
@@ -58,4 +54,8 @@ a.is-active::after {
   background-color: #00acdc;
   border-radius: 8px;
   top: 56px;
+}
+
+a.is-active:hover {
+  color: #00acdc;
 }
