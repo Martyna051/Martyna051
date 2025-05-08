@@ -1,70 +1,61 @@
-/* Używamy bardziej specyficznych selektorów zamiast * */
-body, ul, li, h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --blue-color: #007aff;
-}
-
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 50px;
 }
 
-/* Logo ma mieć wysokość 40px, ścieżka powinna być zgodna z Twoją strukturą */
-header a img {
+.logo {
+  display: flex;
+  width: 40px;
   height: 40px;
+  margin-left: 50px;
 }
 
-/* Zmiana wysokości i centrowanie treści nawigacji */
 nav ul {
   display: flex;
   list-style: none;
-  align-items: center;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
 
 nav ul li a {
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.5;
-  height: 80px; /* Wysokość nawigacyjnych linków */
   display: flex;
   align-items: center;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: var(--blue-color);
-}
-
-/* Pseudo-element do aktywnego linku */
-nav ul li a.is-active::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--blue-color);
-  margin-top: 5px;
-}
-
-/* Zapewnienie braku marginesu przed pierwszym i po ostatnim elemencie listy */
-nav ul li:first-child {
-  margin-left: 0;
+  text-align: center;
+  height: 60px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  margin-right: 20px;
 }
 
 nav ul li:last-child {
   margin-right: 0;
+}
+
+a.is-active:hover {
+  color: #00acdc;
+}
+
+nav ul li a.is-active {
+  color: #00acdc;
+}
+
+a.is-active::after {
+  display: flex;
+  content: '';
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  background-color: #00acdc;
+  border-radius: 8px;
+  top: 56px;
 }
