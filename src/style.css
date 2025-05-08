@@ -1,4 +1,5 @@
-* {
+/* Używamy bardziej specyficznych selektorów zamiast * */
+body, ul, li, h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,15 +13,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
   padding: 0 20px;
   background-color: #fff;
 }
 
+/* Logo ma mieć wysokość 40px, ścieżka powinna być zgodna z Twoją strukturą */
 header a img {
   height: 40px;
 }
 
+/* Zmiana wysokości i centrowanie treści nawigacji */
 nav ul {
   display: flex;
   list-style: none;
@@ -38,6 +40,9 @@ nav ul li a {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
+  height: 80px; /* Wysokość nawigacyjnych linków */
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
 }
 
@@ -45,6 +50,7 @@ nav ul li a:hover {
   color: var(--blue-color);
 }
 
+/* Pseudo-element do aktywnego linku */
 nav ul li a.is-active::after {
   content: "";
   display: block;
@@ -54,6 +60,7 @@ nav ul li a.is-active::after {
   margin-top: 5px;
 }
 
+/* Zapewnienie braku marginesu przed pierwszym i po ostatnim elemencie listy */
 nav ul li:first-child {
   margin-left: 0;
 }
